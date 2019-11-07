@@ -58,20 +58,25 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Baron Neue
-       - asset:assets/fonts/fonts/baron_nueue_regular.otf
+
+   # - family: Baron Neue
+    #  - asset: fonts/baron_nueue_regular.otf
+
     #- family: Baron Neue
     #    fonts:
      #       - asset: assets/fonts/baron_nueue_regular.otf
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+  fonts:
+     - family: Baron Neue
+       fonts:
+         - asset: fonts/Baron-Neue.otf
+  #
+  #
+     - family: SF Compact Display
+       fonts:
+         - asset: fonts/SF-Compact-Display-Ultralight.otf
+           weight: 500
+         - asset: fonts/SF-Compact-Display-Medium.otf
+           weight: 300
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

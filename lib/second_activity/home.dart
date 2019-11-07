@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -15,35 +16,79 @@ class _Home extends State<Home> {
     return Scaffold(
         backgroundColor: Colors.white,
         body: Container(
-          width: MediaQuery.of(context).size.width,
-          height: 896,
-          padding: EdgeInsets.all(10),
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/images/logo/splash_screen.png'),
-                    fit: BoxFit.cover)
-            ),
+                    fit: BoxFit.cover)),
             child: Container(
-
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.only(left: 25,top: 40),
+                    // color: Colors.yellow,
+                    padding: EdgeInsets.only(left: 12, top: 40),
                     alignment: Alignment.topLeft,
-                    child: Text("Oculus",style: TextStyle(color: Colors.white,fontSize: 40,fontFamily: "Baron Neue"),),
+                    child: Text(
+                      "Oculus",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontFamily: "Baron Neue"),
+                    ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(left: 25,top: 40),
+                    //color: Colors.yellow,
+                    padding: EdgeInsets.only(right: 80, left: 10, top: 25),
                     alignment: Alignment.topLeft,
-                    child: Text("Have a great family time",style: TextStyle(color: Colors.white,fontSize: 40,fontFamily: "Baron Neue"),),
+                    // width: 300,
+                    child: Text(
+                      "Have a great family time",
+                      //textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 50,
+                          fontFamily: "SF Compact Display",
+                          fontStyle: FontStyle.normal),
+                    ),
                   ),
                   Container(
-                    child: Text("Stay connected to your loved ones",style: TextStyle(color: Colors.white,fontSize: 40,fontFamily: "Baron Neue"),),
+                    alignment: Alignment.topLeft,
+                    padding: EdgeInsets.only(left: 10, top: 0),
+                    child: Text(
+                      "Stay connected to your loved ones",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontFamily: "SF Compact Display",
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: (EdgeInsets.only(
+                        top: MediaQuery.of(context).size.height / 2)),
+                    padding: EdgeInsets.only(bottom: 0),
+                    width: 450,
+                    height: 80,
+                    alignment: Alignment.bottomCenter,
+                    child: Card(
+                      color: Color.fromRGBO(190, 202, 231, 100),
+                      child: Center(
+                        child: Text(
+                          "Start using Oculus",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 21,
+                              fontFamily: "SF Compact Display"),
+                        ),
+                      ),
+                    ),
                   )
                 ],
               ),
-            )
-        )
-    );
+            )));
   }
 }

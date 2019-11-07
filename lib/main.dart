@@ -40,8 +40,9 @@ class _SpashScreen extends State<SplashScreen> {
       backgroundColor: Color.fromRGBO(84, 97, 200, 100),
       body: Center(
           child: loading
-              ? Image.asset('assets/images/logo/logo_oculus.png',
-                  width: 50, height: 50)
+              ? Text("O",style: TextStyle(color: Colors.white,
+              fontSize: 80,
+              fontFamily: "Baron Neue"),)
               :  Home()),
     );
   }
