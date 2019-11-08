@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:oculus/login_screen/login.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -68,13 +69,37 @@ class _Home extends State<Home> {
                     ),
                   ),
                   Container(
-                    margin: (EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height / 2)),
-                    padding: EdgeInsets.only(bottom: 0),
-                    width: 450,
-                    height: 80,
-                    alignment: Alignment.bottomCenter,
-                    child: Card(
+                      margin: (EdgeInsets.only(
+                          top: MediaQuery.of(context).size.height / 2)),
+                      padding: EdgeInsets.only(bottom: 0),
+
+                      //color: Color.fromRGBO(190, 202, 231, 100),
+                      alignment: Alignment.bottomCenter,
+                      child: Material(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4)),
+                        color: Color.fromRGBO(190, 202, 231, 100),
+                        clipBehavior: Clip.antiAlias,
+                        child: MaterialButton(
+                          minWidth: 480,
+                          height: 60,
+                          child: Text(
+                            "Start using Oculus",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 21,
+                                fontFamily: "SF Compact Display"),
+                          ),
+                         onPressed: (){
+                           naviagteTOLogin(context);
+                         },
+                        ),
+                      ))
+                ],
+              ),
+            )));
+
+    /*Card(
                       color: Color.fromRGBO(190, 202, 231, 100),
                       child: Center(
                         child: Text(
@@ -85,10 +110,10 @@ class _Home extends State<Home> {
                               fontFamily: "SF Compact Display"),
                         ),
                       ),
-                    ),
-                  )
-                ],
-              ),
-            )));
+                    ),*/
   }
+}
+
+Future naviagteTOLogin(context) async{
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
 }
