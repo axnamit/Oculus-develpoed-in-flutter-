@@ -37,7 +37,7 @@ class _SpashScreen extends State<SplashScreen> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Color.fromRGBO(84, 97, 200, 100),
+      backgroundColor: Color(0xff2B2B52),
       body: Center(
           child: loading
               ? Text("O",style: TextStyle(color: Colors.white,
