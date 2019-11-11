@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Register extends StatefulWidget{
+class Register extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
     return _Register();
   }
-
 }
 
 class _Register extends State<Register> {
@@ -15,7 +14,7 @@ class _Register extends State<Register> {
     var x = MediaQuery.of(context).size.height;
     // TODO: implement build
     return Container(
-      color: Colors.red,
+        color: Color(0xff2B2B52),
         child: Column(
           children: <Widget>[
             Container(
@@ -41,7 +40,7 @@ class _Register extends State<Register> {
                           fontFamily: "Baron Neue",
                           fontSize: 40,
                           color: Colors.white,
-                      decoration: TextDecoration.none),
+                          decoration: TextDecoration.none),
                     ),
                   ),
                   Container(
@@ -51,12 +50,10 @@ class _Register extends State<Register> {
                             fontFamily: "SF Compact Display",
                             fontSize: 28,
                             color: Colors.white,
-                        decoration: TextDecoration.none)),
+                            decoration: TextDecoration.none)),
                   ),
-
                 ],
               ),
-
             ),
             Container(
               margin: EdgeInsets.only(top: x / 6),
@@ -67,30 +64,59 @@ class _Register extends State<Register> {
                       color: Colors.white,
                       decoration: TextDecoration.none)),
             ),
+            Container(
+              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.only(top: 10),
+              width: x / 2,
+              height: x / 1.9,
+              //color: Colors.pinkAccent,
+              child: Material(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  color: Colors.white,
+                  elevation: 6,
+                  child: Container(
+                    padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+                    child: Form(
+                      child: ListView(
+                         padding: const EdgeInsets.symmetric(vertical: 16.0),
+                        children: <Widget>[
+                          
+                           TextFormField(
+                            decoration: InputDecoration(
+                              contentPadding: new EdgeInsets.symmetric(
+                                  vertical: 10.0, horizontal: 10.0),
+                                
+                              hintText: "username",
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25),
+                                borderSide:
+                                    BorderSide(color: Color(0xff2B2B52),
+                                    ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                           TextFormField(
+                            decoration: InputDecoration(
+                              contentPadding: new EdgeInsets.symmetric(
+                                  vertical: 10.0, horizontal: 10.0),
+                              hintText: "password",
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25),
+                                borderSide:
+                                    BorderSide(color: Color(0xff2B2B52)),
+                              ),
+                            ),
+                          ),
+                        ],
 
-Container(
-  margin: EdgeInsets.only(top: 20),
-  width: x/2,
-  height: x/2.5,
-  color: Colors.pinkAccent,
-
-  child: Form(
-    child: Column(
-      children: <Widget>[
-        TextFormField(
-
-        )
-      ],
-    ),
-  ),
-
-)
-
-
-
+                      ),
+                    ),
+                  )),
+            )
           ],
         ));
-
   }
 }
-
