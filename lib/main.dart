@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oculus/new_ui/info.dart';
 import 'package:oculus/second_activity/home.dart';
 
 void main() => runApp(MyApp());
@@ -26,7 +27,7 @@ class _SpashScreen extends State<SplashScreen> {
 
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(Duration(seconds: 3), () {
       setState(() {
         loading = false;
       });
@@ -43,7 +44,7 @@ class _SpashScreen extends State<SplashScreen> {
               ? Text("O",style: TextStyle(color: Colors.white,
               fontSize: 80,
               fontFamily: "Baron Neue"),)
-              :  Home()),
+              :  Info()),
     );
   }
 }
